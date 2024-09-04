@@ -18,8 +18,9 @@
         
         body{
                 background-color: blanchedalmond;
+                font-family: Georgia, 'Times New Roman', Times, serif
             }
-        
+
     </style>
 </head>
 
@@ -86,20 +87,23 @@
         </div>
     </nav>
 
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+    <div style="color: red;">
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Add Product
+     <h3 style="margin-top: 20px;">Would you like to add a product?</h3>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin: 10px;">
+        ADD
     </button>
 
     <!-- Modal -->
@@ -143,7 +147,7 @@
     </div>
 
     <!-- Table -->
-    <table class="table table-success table-striped" id="myTable" class="display">
+    <table class="table table-dark table-striped" id="myTable" class="display" >
         <thead>
             <tr>
                 <th scope="col">ProductID</th>

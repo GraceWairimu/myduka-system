@@ -11,6 +11,7 @@
     <style>
         body {
             background-color: blanchedalmond;
+            font-family: Georgia, 'Times New Roman', Times, serif
         }
     </style>
 </head>
@@ -50,16 +51,18 @@
         </div>
 
     </nav>
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+    <div style="color: red;">
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
 
 
     <!-- Carousel Image -->
@@ -83,7 +86,7 @@
                 <img src="/static/mixed-woman-with-hairs-having-fun-smiling-posing-outdoor-wood-urban-wall.jpg"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block" style="text-align: left;top: 15%;">
-                    <h1 style="color: white; font-size: 45px; ">Unleash Your Inner Fashionista</h1>
+                    <h1 style="color: white; font-size: 45px; ">Unleash Your <br>Inner Fashionista</h1>
                     <p style="font-size: 30px;">Discover the Latest in Women's Fashion - <br> From Chic Denim to Elegant Dresses!</p>
                 </div>
             </div>

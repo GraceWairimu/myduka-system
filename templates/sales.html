@@ -15,6 +15,7 @@
     <style>
         body{
             background-color: blanchedalmond;
+            font-family: Georgia, 'Times New Roman', Times, serif
         }
     </style>
 </head>
@@ -58,20 +59,23 @@
 
     </nav>
 
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class=flashes>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+    <div style="color: red;">
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Make Sale
+     <h3 style="margin-top: 20px;">Make a Sale</h3>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin: 10px;">
+        ADD
     </button>
 
     <!-- Modal -->
@@ -107,7 +111,7 @@
         </div>
     </div>
 
-    <table border="5" class="table table-danger table-striped" id="myTable" class="display">
+    <table border="5" class="table table-dark table-striped" id="myTable" class="display">
         <thead>
             <tr>
                 <th>Sales ID</th>
